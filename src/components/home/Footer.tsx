@@ -1,6 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const socials = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/varcas_iron_press/",
+    src: "/assets/instagram.png",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@VarcasIronPress",
+    src: "/assets/youtube.png",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@lpg.iron.press",
+    src: "/assets/tiktok.png",
+  },
+];
+
 export function Footer() {
   return (
     <footer className="rounded-t-[40px] bg-surface px-5 py-12 md:rounded-t-[80px] md:px-10 md:py-14 lg:rounded-t-[100px] lg:px-20">
@@ -16,14 +34,25 @@ export function Footer() {
         <p className="mt-5 text-sm text-white md:text-base">
           VARCAS Industries Pvt. Ltd. | Heavy Duty LPG Iron Press. Made in India
         </p>
-        <div className="relative mt-5 h-7 w-[246px] max-w-full overflow-hidden">
-          <Image
-            src="/assets/icon-social.svg"
-            alt="Social links"
-            width={246}
-            height={28}
-            className="h-full w-auto object-contain object-left"
-          />
+        <div className="mt-5 flex items-center gap-4">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="inline-flex size-7 items-center justify-center transition hover:opacity-80"
+            >
+              <Image
+                src={social.src}
+                alt=""
+                width={28}
+                height={28}
+                className="size-7 object-contain"
+              />
+            </a>
+          ))}
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-[13px] text-white sm:flex-row sm:items-center sm:justify-between">
