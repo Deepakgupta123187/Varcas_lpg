@@ -56,29 +56,29 @@ export function Technology() {
               tabIndex={0}
               aria-labelledby={`tech-title-${index}`}
               aria-describedby={`tech-desc-${index}`}
-              className="tech-card group relative flex min-h-[168px] cursor-default items-center justify-center overflow-hidden rounded-[20px] bg-card px-3 py-4 outline-none transition-[background-color] duration-[400ms] ease-out hover:bg-[#FF6B00] focus-visible:bg-[#FF6B00] motion-reduce:transition-none sm:min-h-[200px] sm:px-5 sm:py-6 md:px-6"
+              className="tech-card group relative flex min-h-[168px] cursor-default items-center justify-center overflow-hidden rounded-[20px] bg-card px-3 py-4 outline-none transition-[background-color] duration-[400ms] ease-out hover:bg-[#FF6B00] focus-visible:bg-[#FF6B00] motion-reduce:transition-none sm:min-h-[200px] sm:px-5 sm:py-6"
             >
-              <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px]">
-                <div className="flex items-center justify-center gap-2 transition-transform duration-[400ms] ease-out group-hover:-translate-y-3 group-focus-visible:-translate-y-3 motion-reduce:transform-none motion-reduce:transition-none sm:gap-3">
-                  <div className="relative size-8 shrink-0 sm:size-[39px]">
+              <div className="relative flex w-full flex-col items-center transition-transform duration-[400ms] ease-out group-hover:-translate-y-5 group-focus-visible:-translate-y-5 motion-reduce:transform-none motion-reduce:transition-none">
+                <div className="flex items-center justify-center gap-2 sm:gap-3">
+                  <div className="relative size-8 shrink-0 sm:size-10">
                     <Image
                       src={card.icon}
                       alt=""
-                      width={39}
-                      height={39}
+                      width={40}
+                      height={40}
                       className="size-full object-contain transition-[filter] duration-[400ms] ease-out group-hover:brightness-0 group-hover:invert group-focus-visible:brightness-0 group-focus-visible:invert motion-reduce:transition-none"
                     />
                   </div>
                   <h3
                     id={`tech-title-${index}`}
-                    className="min-w-0 text-[15px] font-semibold leading-snug text-balance text-accent transition-colors duration-[400ms] ease-out group-hover:text-white group-focus-visible:text-white motion-reduce:transition-none sm:text-lg"
+                    className="min-w-0 text-center text-[15px] font-semibold leading-snug text-accent transition-colors duration-[400ms] ease-out group-hover:text-white group-focus-visible:text-white motion-reduce:transition-none sm:whitespace-nowrap sm:text-lg"
                   >
                     {card.title}
                   </h3>
                 </div>
                 <p
                   id={`tech-desc-${index}`}
-                  className="pointer-events-none absolute inset-x-0 top-full mt-2 w-full translate-y-1 text-center text-[11px] leading-snug text-white opacity-0 transition-[opacity,transform] duration-[400ms] ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none sm:mt-3 sm:text-sm"
+                  className="pointer-events-none absolute inset-x-0 top-full mt-2 w-full translate-y-1 text-center text-[11px] leading-snug text-white opacity-0 transition-[opacity,transform] duration-[400ms] ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none sm:mt-2 sm:text-[13px] sm:leading-[1.4]"
                 >
                   {card.description}
                 </p>
