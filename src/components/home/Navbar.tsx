@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
@@ -19,15 +18,9 @@ const CATALOGUE_FILENAME = "VARCAS_LPG_Iron_Press_Catalogue.pdf";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 ${
-        isHome ? "bg-transparent" : "bg-surface/90 backdrop-blur-md"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 bg-surface/90 backdrop-blur-md">
       <nav className="mx-auto flex h-[70px] max-w-[1440px] items-center justify-between gap-3 px-5 md:px-10 lg:px-20">
         <Link href="/" className="relative h-9 w-[117px] shrink-0">
           <Image
