@@ -56,9 +56,9 @@ export function Technology() {
               tabIndex={0}
               aria-labelledby={`tech-title-${index}`}
               aria-describedby={`tech-desc-${index}`}
-              className="tech-card group relative flex min-h-[168px] cursor-default items-center justify-center overflow-hidden rounded-[20px] bg-card px-3 py-4 transition-[background-color] duration-[400ms] ease-out hover:bg-[#FF6B00] focus-visible:bg-[#FF6B00] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none sm:min-h-[200px] sm:px-5 sm:py-6 md:px-6"
+              className="tech-card group relative flex min-h-[168px] cursor-default items-center justify-center overflow-hidden rounded-[20px] bg-card px-3 py-4 outline-none transition-[background-color] duration-[400ms] ease-out hover:bg-[#FF6B00] focus-visible:bg-[#FF6B00] motion-reduce:transition-none sm:min-h-[200px] sm:px-5 sm:py-6 md:px-6"
             >
-              <div className="relative w-full">
+              <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px]">
                 <div className="flex items-center justify-center gap-2 transition-transform duration-[400ms] ease-out group-hover:-translate-y-3 group-focus-visible:-translate-y-3 motion-reduce:transform-none motion-reduce:transition-none sm:gap-3">
                   <div className="relative size-8 shrink-0 sm:size-[39px]">
                     <Image
@@ -71,14 +71,14 @@ export function Technology() {
                   </div>
                   <h3
                     id={`tech-title-${index}`}
-                    className="min-w-0 text-[13px] font-semibold leading-snug text-balance text-accent transition-colors duration-[400ms] ease-out group-hover:text-white group-focus-visible:text-white motion-reduce:transition-none sm:text-base"
+                    className="min-w-0 text-[15px] font-semibold leading-snug text-balance text-accent transition-colors duration-[400ms] ease-out group-hover:text-white group-focus-visible:text-white motion-reduce:transition-none sm:text-lg"
                   >
                     {card.title}
                   </h3>
                 </div>
                 <p
                   id={`tech-desc-${index}`}
-                  className="pointer-events-none absolute inset-x-0 top-full mt-0 w-full translate-y-1 text-left text-[11px] leading-snug text-white opacity-0 transition-[opacity,transform] duration-[400ms] ease-out group-hover:-translate-y-2 group-hover:opacity-100 group-focus-visible:-translate-y-2 group-focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none sm:text-sm"
+                  className="pointer-events-none absolute inset-x-0 top-full mt-2 w-full translate-y-1 text-center text-[11px] leading-snug text-white opacity-0 transition-[opacity,transform] duration-[400ms] ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none sm:mt-3 sm:text-sm"
                 >
                   {card.description}
                 </p>
