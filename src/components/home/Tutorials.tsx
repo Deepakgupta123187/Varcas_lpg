@@ -1,5 +1,18 @@
 import Image from "next/image";
 
+const YOUTUBE_URL = "https://www.youtube.com/@VarcasIronPress";
+
+const tutorials = [
+  {
+    title: "Watch VARCAS tutorials on YouTube",
+    href: YOUTUBE_URL,
+  },
+  {
+    title: "Watch more VARCAS videos on YouTube",
+    href: YOUTUBE_URL,
+  },
+];
+
 export function Tutorials() {
   return (
     <section className="bg-surface px-5 py-16 md:px-10 md:py-20 lg:px-20">
@@ -15,19 +28,23 @@ export function Tutorials() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-[45px]">
-          {[1, 2].map((i) => (
-            <div
-              key={i}
-              className="relative aspect-video overflow-hidden rounded-[20px] bg-card"
+          {tutorials.map((tutorial) => (
+            <a
+              key={tutorial.title}
+              href={tutorial.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={tutorial.title}
+              className="relative aspect-video overflow-hidden rounded-[20px] bg-card transition hover:opacity-90"
             >
               <Image
                 src="/assets/tutorial.png"
-                alt={`Tutorial video ${i}`}
+                alt=""
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

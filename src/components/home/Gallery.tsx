@@ -17,11 +17,7 @@ const images = [
 
 function GalleryItem({ src, index }: { src: string; index: number }) {
   return (
-    <div
-      className={`relative overflow-hidden rounded-[25px] bg-[#292929] shadow-[0_4px_4px_rgba(0,0,0,0.25)] ${
-        index % 3 === 2 ? "aspect-square md:aspect-[560/297]" : "aspect-square"
-      }`}
-    >
+    <div className="relative aspect-square overflow-hidden rounded-[25px] bg-[#292929] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
       <Image
         src={src}
         alt={`Gallery image ${index + 1}`}
